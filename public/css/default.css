@@ -1,0 +1,42 @@
+body {
+
+  font-family: 'Vollkorn', serif;
+}
+
+.container {
+  border: double black 1px; 
+  padding-top: .4em;
+  padding-left: 1.4em;
+  padding-right: 1.4em;
+  padding-bottom: .4em;
+  width: 400px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px; /* future proofing */
+  -khtml-border-radius: 7px; /* for old Konqueror browsers */
+  background: #ffffff; /* Old browsers */
+  background: -moz-linear-gradient(top,  #ffffff 0%, #f6f6f6 47%, #ededed 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#f6f6f6), color-stop(100%,#ededed)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+}
+
+.quote {
+  font-size:1.2em;
+}
+
+.author {
+  padding-top: .2em;
+  padding-left: 1em;
+  display: inline;
+}
+
+.permalink {
+  background-image: url('http://handsonwp.com/wp-content/uploads/2011/06/link-building.jpg');
+  display: inline;
+  margin-left: auto;
+  margin-rigth: auto;
+}

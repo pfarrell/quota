@@ -1,0 +1,9 @@
+.container
+  .quote
+    = quote.quote
+  .author
+    \- #{quote.author.name }
+  .permalink
+    %a{href: "#{url_for("/" + quote.id.to_s)}"}
+      permalink
+    
