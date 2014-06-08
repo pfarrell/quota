@@ -1,7 +1,7 @@
 require 'sequel'
 
 user = ENV["QUOTA_DB_USER"]
-pass = ENV["QUOTA_DB_PASSWORD"]
+pass = ENV["QUOTA_DB_PASS"]
 host = ENV["QUOTA_DB_HOST"]
 db = ENV["QUOTA_DB_DB"]
 DB = Sequel.connect("mysql://#{user}:#{pass}@#{host}/#{db}")
