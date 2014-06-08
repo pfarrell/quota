@@ -8,7 +8,7 @@ set :repo_url, 'git@github.com:pfarrell/quota.git'
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app
-set :deploy_to, '/var/www/pshare'
+set :deploy_to, '/var/www/quota'
 
 # Default value for :scm is :git
 set :scm, :git
