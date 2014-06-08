@@ -17,7 +17,7 @@ set :scm, :git
 # set :format, :pretty
 
 # Default value for :log_level is :debug
-set :log_level, :info
+set :log_level, :debug
 
 # Default value for :pty is false
 set :pty, true
@@ -27,7 +27,7 @@ set :deploy_via, :remote_cache
 # set :linked_files, %w{config/database.yml}
 
 # Default value for linked_dirs is []
-set :linked_dirs, %w{log tmp}
+# set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
@@ -56,11 +56,4 @@ namespace :deploy do
     end
   end
 
-end
-
-namespace :server do
-  desc 'check environment'
-  task :env do
-    exec "env"
-  end
 end

@@ -1,7 +1,6 @@
 require 'sinatra'
 require 'sinatra/url_for'
 require 'haml'
-require 'byebug'
 
 class Quota < Sinatra::Application
   helpers Sinatra::UrlForHelper
