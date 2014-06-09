@@ -31,12 +31,13 @@ body {
 .author {
   padding-top: .2em;
   padding-left: 1em;
-  display: inline;
 }
 
-.permalink {
-  background-image: url('http://handsonwp.com/wp-content/uploads/2011/06/link-building.jpg');
+.inline-link {
   display: inline;
-  margin-left: auto;
-  margin-rigth: auto;
+  margin-left: .25em;
 }
+.permalink {
+<!--  background-image: url('http://handsonwp.com/wp-content/uploads/2011/06/link-building.jpg');-->
+}
+

@@ -3,7 +3,10 @@
     = quote.quote
   .author
     \- #{quote.author.name }
-  .permalink
+  .permalink.inline-link
     %a{href: "#{url_for("/" + quote.id.to_s)}"}
       permalink
+  .inline-link
+    %a{href: "."}
+      new one
     
