@@ -5,7 +5,7 @@ class Quota < Sinatra::Application
   end
 
   get '/' do
-    quote = Quote[(rand*Quote.count).ceil % Quote.count]
+    quote = Quote[rand(1..Quote.count)]
     haml :index, locals: {quote: quote} 
   end
 
