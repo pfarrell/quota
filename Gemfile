@@ -5,6 +5,7 @@ gem 'haml'
 gem 'sequel'
 gem 'mysql'
 gem 'emk-sinatra-url-for'
+gem 'sinatra-respond_to'
 gem 'json'
 
 gem 'passenger'
