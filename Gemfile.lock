@@ -9,6 +9,7 @@ GEM
       capistrano (~> 3.0)
       sshkit (~> 1.2)
     colorize (0.7.3)
+    daemon_controller (1.2.0)
     emk-sinatra-url-for (0.2.1)
       sinatra (>= 0.9.1.1)
     haml (4.0.5)
@@ -19,6 +20,10 @@ GEM
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.1)
+    passenger (4.0.44)
+      daemon_controller (>= 1.2.0)
+      rack
+      rake (>= 0.8.1)
     rack (1.4.5)
     rack-protection (1.5.3)
       rack
@@ -44,5 +49,6 @@ DEPENDENCIES
   haml
   json
   mysql
+  passenger
   sequel
   sinatra
