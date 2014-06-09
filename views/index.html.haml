@@ -2,7 +2,9 @@
   .quote
     = quote.quote
   .author
-    \- #{quote.author.name }
+    \- 
+    %a{href: "#{quote.url}"}
+      #{quote.author.name }
   .permalink.inline-link
     %a{href: "#{url_for("/" + quote.id.to_s)}"}
       permalink
