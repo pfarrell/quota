@@ -3,7 +3,7 @@ source "https://rubygems.org"
 gem 'sinatra'
 gem 'haml'
 gem 'sequel'
-gem 'mysql'
+gem 'mysql2'
 gem 'emk-sinatra-url-for'
 gem 'sinatra-respond_to'
 gem 'json'
