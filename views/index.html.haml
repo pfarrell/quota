@@ -1,14 +1,19 @@
 .container
-  .quote
-    = quote.quote
-  .author
-    \- 
-    %a{href: "#{quote.url}"}
-      #{quote.author.name }
-  .permalink.inline-link
-    %a{href: "#{url_for("/" + quote.id.to_s)}"}
-      permalink
-  .inline-link
-    %a{href: "#{url_for("/")}"}
-      new one
+  %table
+    %tr
+      %td
+        %img.author-img{src: "#{quote.author.image_url}"}
+      %td
+        .quote
+          = quote.quote
+        .author
+          \- 
+          %a{href: "#{quote.url}"}
+            #{quote.author.name }
+        .permalink.inline-link
+          %a{href: "#{url_for("/" + quote.id.to_s)}"}
+            permalink
+        .inline-link
+          %a{href: "#{url_for("/")}"}
+            new one
     

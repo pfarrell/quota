@@ -9,7 +9,7 @@ body {
   padding-left: 1.4em;
   padding-right: 1.4em;
   padding-bottom: .4em;
-  width: 400px;
+  width: 45%;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
   border-radius: 7px; /* future proofing */
@@ -29,14 +29,20 @@ body {
 }
 
 .author {
-  padding-top: .2em;
-  padding-left: 1em;
+  padding-bottom: .2em;
 }
 
 .inline-link {
   display: inline;
-  margin-left: .25em;
+  margin-right: .25em;
 }
+
+.author-img {
+  height: 150px;
+  padding-right:1em;
+}
+
+
 .permalink {
 <!--  background-image: url('http://handsonwp.com/wp-content/uploads/2011/06/link-building.jpg');-->
 }
