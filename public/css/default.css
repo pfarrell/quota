@@ -26,6 +26,8 @@ body {
 
 .quote {
   font-size:1.2em;
+  padding-top:1.5em;
+  padding-bottom:1.5em;
 }
 
 .author {
@@ -41,7 +43,6 @@ body {
   height: 150px;
   padding-right:1em;
 }
-
 
 .permalink {
 <!--  background-image: url('http://handsonwp.com/wp-content/uploads/2011/06/link-building.jpg');-->
