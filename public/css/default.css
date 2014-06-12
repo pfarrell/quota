@@ -4,16 +4,15 @@ body {
 }
 
 .container {
-  border: double black 1px; 
-  padding-top: .4em;
-  padding-left: 1.4em;
-  padding-right: 1.4em;
-  padding-bottom: .4em;
+  padding-top: .2em;
+  padding-left: .4em;
+  padding-right: .4em;
+  padding-bottom: .2em;
   width: 45%;
-  -moz-border-radius: 7px;
-  -webkit-border-radius: 7px;
-  border-radius: 7px; /* future proofing */
-  -khtml-border-radius: 7px; /* for old Konqueror browsers */
+  -moz-border-radius: 45px;
+  -webkit-border-radius: 45px;
+  border-radius: 45px; /* future proofing */
+  -khtml-border-radius: 45px; /* for old Konqueror browsers */
   background: #ffffff; /* Old browsers */
   background: -moz-linear-gradient(top,  #ffffff 0%, #f6f6f6 47%, #ededed 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#f6f6f6), color-stop(100%,#ededed)); /* Chrome,Safari4+ */
@@ -26,7 +25,7 @@ body {
 
 .quote {
   font-size:1.2em;
-  padding-top:1.5em;
+  padding-top:1em;
   padding-bottom:1.5em;
 }
 
@@ -40,8 +39,12 @@ body {
 }
 
 .author-img {
-  height: 150px;
-  padding-right:1em;
+  max-height: 150px;
+  margin-right: 1em;
+  -webkit-border-radius: 45px;
+  -moz-border-radius: 45px;
+  border-radius: 45px;
+
 }
 
 .permalink {
