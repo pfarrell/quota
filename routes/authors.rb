@@ -1,7 +1,6 @@
 class Quota < Sinatra::Application
 
   get '/admin/authors' do
-    aut
     quote = Quote[rand(1..Quote.count)]
     respond_to do |wants|
       wants.html { haml :index, locals: {quote: quote} } 
@@ -13,6 +12,10 @@ class Quota < Sinatra::Application
     haml :'admin/author'
   end
   
-  post 'admin/authors' do
+  post 'authors/new' do
+    author = Author.new
+    author.name = params[:name]
+    author.image = params[:image]
+    author.save!
   end
 end
