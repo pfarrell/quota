@@ -20,8 +20,6 @@ class Quota < Sinatra::Application
       wants.json { quote.to_json }
     end
   end
-                      do
-  end
 
   post 'admin/quotes' do
   end
