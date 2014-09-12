@@ -5,6 +5,6 @@ class Quote < Sequel::Model
   many_to_one :source
 
   def to_json(opts={})
-    return JSON.generate({quote: self.quote, author: self.author.name, source: self.author.url})
+    return JSON.generate({quote: self.quote, author: self.author.name, source: self.author.image_url})
   end
 end
