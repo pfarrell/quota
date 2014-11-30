@@ -22,5 +22,11 @@ class Quota < Sinatra::Application
   end
 
   post 'admin/quotes' do
+    q = params[:id].nil? ? Quote.new : Quote[params[:id].to_i]
+    q.quote = params[:quote]
+    q.author = Author[params[:author]] 
+    q.url = params[:url]
+    q.save
+    redirect '/'
   end
 end
