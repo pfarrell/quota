@@ -21,7 +21,12 @@ class Quota < Sinatra::Application
     end
   end
 
-  post 'admin/quotes' do
+  get '/admin/quote/:id' do
+    q = Quote[params[:id].to_i]
+    haml :'admin/quote', locals: {q: Quote[params[:id]]}
+  end
+
+  post '/admin/quote/:id' do
     q = params[:id].nil? ? Quote.new : Quote[params[:id].to_i]
     q.quote = params[:quote]
     q.author = Author[params[:author]] 

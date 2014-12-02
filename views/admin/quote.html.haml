@@ -1,0 +1,16 @@
+%form{role: "form", method: "POST", action: "#{url_for("/admin/quote/#{q.id}")}"}
+  .form-group
+    %label{for: "quote"}
+      Quote
+    %input.form-control{type: "text", id: "quote", name: "quote", value: "#{q.quote}"}
+  .form-group
+    %label{for: "author"}
+      Author
+    %input.form-control{type: "text", id: "author", name: "author", value: "#{q.author.nil? ? "" : q.author.id}"}
+  .form-group
+    %label{for: "url"}
+      Url
+    %input.form-control{type: "text", id: "url", name: "url", value: "#{q.url}"}
+  %button.btn.btn-default{type: "submit"} 
+    Save
+  
