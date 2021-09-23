@@ -8,6 +8,7 @@ gem 'pg'
 gem 'sinatra-respond_to'
 gem 'emk-sinatra-url-for'
 gem 'json'
+gem 'rack'
 
 gem 'passenger'
 gem 'capistrano', '~> 3.16.0'
