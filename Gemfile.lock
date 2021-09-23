@@ -56,9 +56,13 @@ DEPENDENCIES
   json
   passenger
   pg
+  rack
   sequel
   sinatra
   sinatra-respond_to
+
+RUBY VERSION
+   ruby 2.6.5p114
 
 BUNDLED WITH
    2.2.0
