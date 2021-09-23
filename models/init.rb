@@ -1,10 +1,7 @@
 require 'sequel'
 
-user = ENV["QUOTA_DB_USER"]
-pass = ENV["QUOTA_DB_PASS"]
-host = ENV["QUOTA_DB_HOST"]
-db = ENV["QUOTA_DB_DB"]
-DB = Sequel.connect("mysql2://#{user}:#{pass}@#{host}/#{db}")
+connstr = ENV["QUOTA_CONN"]
+DB = Sequel.connect(connstr)
 Sequel::Model.plugin :timestamps
 
 require_relative 'quote'

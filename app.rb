@@ -6,11 +6,6 @@ require 'haml'
 class Quota < Sinatra::Application
   register Sinatra::RespondTo
   helpers Sinatra::UrlForHelper
-
-  
-
-
-
 end
 
 require_relative 'models/init'

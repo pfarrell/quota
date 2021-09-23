@@ -1,17 +1,17 @@
 # config valid only for Capistrano 3.1
-lock '3.2.1'
+lock '3.16'
 
 set :application, 'quota'
 set :repo_url, 'git@github.com:pfarrell/quota.git'
+set :rvm_ruby_string, :local
 
 # Default branch is :master
-# ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
+ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app
 set :deploy_to, '/var/www/quota'
-
-# Default value for :scm is :git
-set :scm, :git
+set :rvm_map_bins, %w{bundle gem rake ruby}
+set :rvm_type, :auto
 
 # Default value for :format is :pretty
 # set :format, :pretty
@@ -27,10 +27,17 @@ set :deploy_via, :remote_cache
 # set :linked_files, %w{config/database.yml}
 
 # Default value for linked_dirs is []
-set :linked_dirs, %w{tmp}
+# set :linked_dirs, %w{log tmp public/tmp public/images public/mp3s}
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
+
+set :default_env, {
+  'PATH' => "/home/pfarrell/.rvm/rubies/ruby-2.6.5/bin:/home/pfarrell/.rvm/gems/ruby-2.6.5@global/bin:/home/pfarrell/.rvm/bin:$PATH",
+  'RUBY_VERSION' => 'ruby-2.6.5',
+  'GEM_HOME' => '/home/pfarrell/.rvm/gems/ruby-2.6.5.0@global',
+  'GEM_PATH' => '/home/pfarrell/.rvm/gems/ruby-2.6.5.0@global'
+}
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
