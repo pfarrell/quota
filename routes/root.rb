@@ -5,7 +5,7 @@ class Quota < Sinatra::Application
   end
 
   get '/' do
-    quote = Quote[rand(1..Quote.count)]
+    quote = Quote.order(Sequel.lit('RANDOM()')).limit(1).first
     respond_to do |wants|
       wants.html { haml :index, locals: {quote: quote} }
       wants.json { quote.to_json }
