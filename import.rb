@@ -10,6 +10,6 @@ require_relative 'models/author'
 
 open(ARGV[1]).each_line do |line|
   obj = JSON.parse(line)
-  author = Author.find_or_create(name: obj["author"])
+  author = Author.find_or_create(name: obj["author"], image_url: obj["author_image"])
   Quote.find_or_create(author: author, quote: obj["quote"], url: obj["source"])
 end
