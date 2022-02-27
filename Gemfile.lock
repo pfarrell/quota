@@ -8,8 +8,13 @@ GEM
       i18n
       rake (>= 10.0.0)
       sshkit (>= 1.9.0)
+    capistrano-bower (1.1.0)
+      capistrano (~> 3.0)
     capistrano-bundler (1.1.4)
       capistrano (~> 3.1)
+      sshkit (~> 1.2)
+    capistrano-rvm (0.1.2)
+      capistrano (~> 3.0)
       sshkit (~> 1.2)
     concurrent-ruby (1.1.9)
     emk-sinatra-url-for (0.2.1)
@@ -50,7 +55,9 @@ PLATFORMS
 
 DEPENDENCIES
   capistrano (~> 3.16.0)
+  capistrano-bower
   capistrano-bundler (~> 1.1.2)
+  capistrano-rvm
   emk-sinatra-url-for
   haml
   json
@@ -65,4 +72,4 @@ RUBY VERSION
    ruby 2.6.5p114
 
 BUNDLED WITH
-   2.2.0
+   2.3.8
