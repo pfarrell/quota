@@ -4,9 +4,9 @@ class Quota < Sinatra::Application
       obj.to_s == obj.to_i.to_s
   end
 
-  get '/' do
+  get '/', provides: [:html, :json] do
     quote = Quote.order(Sequel.lit('RANDOM()')).limit(1).first
-    respond_to do |wants|
+    respond_with do |wants|
       wants.html { haml :index, locals: {quote: quote} }
       wants.json { quote.to_json }
     end
@@ -15,7 +15,7 @@ class Quota < Sinatra::Application
   get '/:id' do
     quote = Quote[params[:id].to_i] if is_number? params[:id]
     redirect "/" if quote.nil?
-    respond_to do |wants|
+    respond_with do |wants|
       wants.html { haml :index, locals: {quote: quote} }
       wants.json { quote.to_json }
     end

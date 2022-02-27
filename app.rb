@@ -1,10 +1,10 @@
 require 'sinatra'
 require 'sinatra/url_for'
-require 'sinatra/respond_to'
+require 'sinatra/respond_with'
 require 'haml'
 
 class Quota < Sinatra::Application
-  register Sinatra::RespondTo
+  register Sinatra::RespondWith
   helpers Sinatra::UrlForHelper
 end
 
