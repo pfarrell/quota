@@ -6,23 +6,16 @@ class Quota < Sinatra::Application
 
   get '/' do
     quote = Quote[rand(1..Quote.count)]
-    respond_to do |wants|
-      wants.html { haml :index, locals: {quote: quote} }
-      wants.json { quote.to_json }
-    end
+    haml :index, locals: {quote: quote}
   end
 
   get '/:id' do
     quote = Quote[params[:id].to_i] if is_number? params[:id]
     redirect "/" if quote.nil?
-    respond_to do |wants|
-      wants.html { haml :index, locals: {quote: quote} }
-      wants.json { quote.to_json }
-    end
+    haml :index, locals: {quote: quote}
   end
 
   get '/admin/quote/:id' do
-    q = Quote[params[:id].to_i]
     haml :'admin/quote', locals: {q: Quote[params[:id]]}
   end
 
